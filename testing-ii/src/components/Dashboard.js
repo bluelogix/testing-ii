@@ -11,8 +11,8 @@ function Dashboard(props) {
     <>
       <button onClick={props.increaseStrike}>Strike</button>
       <button onClick={props.increaseBall}>Ball</button>
-      <button>Hit</button>
-      <button>Foul</button>
+      <button onClick={props.recordedHit}>Hit</button>
+      <button onClick={props.increaseFoul}>Foul</button>
         
     </>
   );
