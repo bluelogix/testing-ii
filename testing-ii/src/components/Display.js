@@ -7,7 +7,7 @@ function Display(props) {
   
 
   return (
-    <>
+      <>
       <h3>Batter Up!</h3>
         <p> Balls {props.balls}</p>
         <p> Strikes {props.strikes}</p>

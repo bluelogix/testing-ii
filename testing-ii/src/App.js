@@ -16,33 +16,45 @@ class App extends Component {
     strikes: 0 // max 3
   }
 
+
 increaseBall = e => {
-  this.setState(prevState => {
+  if(this.state.balls === 4) {
+    this.setState({
+      balls: 0
+    })
+  }else {
+    this.setState(prevState => {
     return{
-      balls: prevState.balls++ 
-    }
-    
+      balls: ++prevState.balls 
+        }
+     }
+    )
   }
-  )
 }
 
 increaseStrike = e => {
-  this.setState(prevState => {
+  if(this.state.strikes === 3) {
+    this.setState({
+      strikes: 0
+    })
+  } else {
+    this.setState(prevState => {
     return{
-      strikes: prevState.strikes++
-    }
+      strikes: ++prevState.strikes
+        }
     
+      }
+    ) 
   }
-  )
 }
 
 increaseFoul = e => {
   this.setState(prevState => {
     return{
       strikes: prevState.strikes++
-    }
+       }
     
-  }
+    }
   )
 }
 
@@ -54,7 +66,7 @@ increaseFoul = e => {
     return (
       <div className="App">
           <Display balls={this.state.balls} strikes={this.state.strikes} />
-          <Dashboard />
+          <Dashboard increaseBall={this.increaseBall} increaseStrike={this.increaseStrike}/>
 
       </div>
     );
