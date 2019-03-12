@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Display from './components/Display'
+import Dashboard from './components/Dashboard'
 
 import './App.css';
 
@@ -35,11 +36,26 @@ increaseStrike = e => {
   )
 }
 
+increaseFoul = e => {
+  this.setState(prevState => {
+    return{
+      strikes: prevState.strikes++
+    }
+    
+  }
+  )
+}
+
+
+
+
+
   render() {
     return (
       <div className="App">
           <Display balls={this.state.balls} strikes={this.state.strikes} />
-          
+          <Dashboard />
+
       </div>
     );
   }
