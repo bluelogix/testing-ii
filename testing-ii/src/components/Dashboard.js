@@ -9,10 +9,10 @@ function Dashboard(props) {
 
   return (
     <>
-      <button onClick={props.increaseStrike}>Strike</button>
-      <button onClick={props.increaseBall}>Ball</button>
-      <button onClick={props.recordedHit}>Hit</button>
-      <button onClick={props.increaseFoul}>Foul</button>
+      <button data-testid='strikebtn' onClick={props.increaseStrike}>Strike</button>
+      <button data-testid='ballbtn' onClick={props.increaseBall}>Ball</button>
+      <button data-testid='hitbtn' onClick={props.recordedHit}>Hit</button>
+      <button data-testid='foulbtn' onClick={props.increaseFoul}>Foul</button>
         
     </>
   );
